@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+  position: relative;
+  width: 400px;
+  height: 250px;
+  background-image: url('image1.jpg');
+  background-size: cover;
+  background-position: center;
+  animation: changeBg 6s infinite;
+}
+
+@keyframes changeBg {
+  0%, 45% {
+    background-image: url('image1.jpg');
+  }
+  50%, 95% {
+    background-image: url('image2.jpg');
+  }
+  100% {
+    background-image: url('image1.jpg');
+  }
+}
+
+</style>
+<body>
+    <div class="container">
+
+    </div>
+</body>
+</html>
