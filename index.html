@@ -27,6 +27,35 @@
     gap: 100px;
     font-family: cursive;
   }
+  .nav-link{
+    margin-bottom: 0px;
+  }
+  /* .nav-link:hover{
+    
+    border-bottom: 3px solid orange;
+    transition: ease 100ms;
+  } */
+   .nav-link {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;    
+  background: orange;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
   .carousel-item img{
     height: 70vh;
     width: 100%;
@@ -51,6 +80,10 @@
     border-radius: 25px;
   }
   .card-container :hover{
+    transform: translateY(-10px);
+    transition: ease 100ms;
+  }
+  .best-seller-heading :hover{
     transform: translateY(-10px);
     transition: ease 100ms;
   }
@@ -163,7 +196,8 @@
 
 <!-- Cards -->
 
-<div class="choose-type"><h1>Choose your type:</h1>
+<div class="choose-type">
+  <h1>Choose your type:</h1>
 <div class="card-container">
 
   <!-- Card 1 -->
@@ -182,7 +216,7 @@
   <!-- Card 2 -->
 
   <div class="card" style="width: 18rem;">
-    <img src="coffee.artisan.webp" class="card-img-top" alt="...">
+    <img src="coffee.webp" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">Coffee</h5>
       <p class="card-text">Coffee is infinite.</p>
@@ -194,7 +228,7 @@
     <!-- Card 3 -->
 
   </div><div class="card" style="width: 18rem;">
-    <img src="tea.artisan.webp" class="card-img-top" alt="...">
+    <img src="tea.jpg" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">Tea</h5>
       <p class="card-text">Our tea is fantastic.</p>
@@ -213,7 +247,7 @@
 
 <div class="best-seller-heading"> <h1>Best Seller:</h1>
 <div class="card" style="width: 18rem;">
-  <img src="coffee.artisan.webp" class="card-img-top" alt="...">
+  <img src="coffee.webp" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Coffee</h5>
     <p class="card-text">Our best .</p>
